@@ -11,3 +11,6 @@
 - - Webpack CLI package provides the command to control the library
 
 - Loaders to transform the jsx extension code into what react understands
+- Babel transform a few of the modern JavaScript features that are not yet supported natively in all browsers
+
+- Nodemon package can monitor the project's files and auto restart node when changes are saved to disk
