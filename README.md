@@ -6,4 +6,8 @@
 - React Dom library to render those interfaces on both the front end and the back end
 
 ## Development
+- Webpack tool to translate modular code into something that browsers understand today. 
+- - Webpack package provides the library
+- - Webpack CLI package provides the command to control the library
 
+- Loaders to transform the jsx extension code into what react understands
