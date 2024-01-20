@@ -15,4 +15,4 @@
 
 - Nodemon package can monitor the project's files and auto restart node when changes are saved to disk
 
-- EJS: It is needed the server to respond with an HTML view template but with dynamic content inside, so instead of generating a big HTML string, EJS(short for embedded JavaScript) is used as a dynamic template language
+- EJS: It is needed the server to respond with an HTML view template but with dynamic content inside, so instead of generating a big HTML string, EJS(short for embedded JavaScript) is used as a dynamic template language. The EJS template lenguage engine is used to server render the JavaScript fron-end components

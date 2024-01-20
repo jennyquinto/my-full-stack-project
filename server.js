@@ -5,11 +5,15 @@ import express from 'express'
 
 const server = express()
 
-server.get('/', (req, res)=>{
-    res.send('Hello Jen from Express')
+server.set('view engine', 'ejs')
+
+server.get('/', (req, res) => {
+    res.render('index.ejs', {
+        content: 'Hello Jen!, from Express and EJS'
+    })
 })
-server.use(express.static('public'))
 server.use('/api', apiRouter)
+server.use(express.static('public'))
 
 server.listen(config.port, () => {
     console.info('Express is listening on port ', config.port)
