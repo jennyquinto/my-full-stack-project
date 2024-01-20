@@ -14,3 +14,5 @@
 - Babel transform a few of the modern JavaScript features that are not yet supported natively in all browsers
 
 - Nodemon package can monitor the project's files and auto restart node when changes are saved to disk
+
+- EJS: It is needed the server to respond with an HTML view template but with dynamic content inside, so instead of generating a big HTML string, EJS(short for embedded JavaScript) is used as a dynamic template language
