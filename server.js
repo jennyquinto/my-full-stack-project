@@ -9,7 +9,7 @@ server.set('view engine', 'ejs')
 
 server.get('/', (req, res) => {
     res.render('index.ejs', {
-        content: 'Hello Jen!, from Express and EJS'
+        content: 'Hello <em>Jen!</em>, from Express and EJS'
     })
 })
 server.use('/api', apiRouter)
