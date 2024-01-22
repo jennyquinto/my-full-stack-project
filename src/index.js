@@ -1,5 +1,7 @@
 import React from 'react' 
 import { createRoot } from 'react-dom/client' 
+import PropTypes from 'prop-types'
+
 
 const root = createRoot(document.getElementById('root')) 
 const randomNum = Math.random() 
@@ -14,9 +16,9 @@ const App = (props) => {
 };
 
 App.propTypes = {
-    headerMessage: React.propTypes.string
+    headerMessage: PropTypes.string
 }
 
 root.render(
-    <App headerMessage="Hello props" />
+    <App headerMessage={4} />
 );
