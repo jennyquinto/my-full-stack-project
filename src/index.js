@@ -9,11 +9,9 @@ const color = randomNum > 0.5 ? 'green' : 'red'
 
 const Header = ({ message }) => {
     return (
-        <div>
-            <h1 className='text-center' style={{ color }}>
-                {message} -- {randomNum}
-            </h1>
-        </div>
+        <h1 className='Header text-center' style={{ color }}>
+            {message}
+        </h1>
     )
 }
 
@@ -27,7 +25,7 @@ Header.defaultProps = {
 
 const App = () => {
     return (
-        <div>
+        <div className='App'>
             <Header message='Naming Contests' />
             <div className="content">
                 ...
