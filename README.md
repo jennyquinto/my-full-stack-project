@@ -25,3 +25,5 @@ Before html is generated, it's possible to represent it as a JavaScript object t
 # Validations
 ## Eslint
 the syntax problems are watched on the app displaying warnings, errors, and alerts on the console, keeping the rules defined at the eslint config file.  
+## Prop-Types
+- React component are going to be part of a prop validations in react to validate the type for these props

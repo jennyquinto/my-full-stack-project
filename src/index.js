@@ -13,6 +13,9 @@ const App = (props) => {
     );
 };
 
+App.propTypes = {
+    headerMessage: React.propTypes.string
+}
 
 root.render(
     <App headerMessage="Hello props" />
