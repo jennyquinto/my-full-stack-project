@@ -16,7 +16,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-    headerMessage: PropTypes.string.isRequired
+    headerMessage: PropTypes.string
 }
 
 App.defaultProps = {
