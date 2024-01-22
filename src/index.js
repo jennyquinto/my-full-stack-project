@@ -1,27 +1,40 @@
-import React from 'react' 
-import { createRoot } from 'react-dom/client' 
+import React from 'react'
+import { createRoot } from 'react-dom/client'
 import PropTypes from 'prop-types'
 
 
-const root = createRoot(document.getElementById('root')) 
-const randomNum = Math.random() 
+const root = createRoot(document.getElementById('root'))
+const randomNum = Math.random()
 const color = randomNum > 0.5 ? 'green' : 'red'
 
-const App = (props) => {
+const Header = ({ message }) => {
     return (
-        <h1 className='text-center' style={{ color }}>
-            {props.headerMessage} -- {randomNum}
-        </h1>
+        <div>
+            <h1 className='text-center' style={{ color }}>
+                {message} -- {randomNum}
+            </h1>
+        </div>
+    )
+}
+
+Header.prototype = {
+    message: PropTypes.string
+}
+
+Header.defaultProps = {
+    message: 'Hello props!'
+}
+
+const App = () => {
+    return (
+        <div>
+            <Header message='Naming Contests' />
+            <div className="content">
+                ...
+            </div>
+        </div>
     );
 };
-
-App.propTypes = {
-    headerMessage: PropTypes.string
-}
-
-App.defaultProps = {
-    headerMessage: 'Hello props!'
-}
 
 root.render(
     <App />
