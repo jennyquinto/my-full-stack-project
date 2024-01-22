@@ -16,9 +16,13 @@ const App = (props) => {
 };
 
 App.propTypes = {
-    headerMessage: PropTypes.string
+    headerMessage: PropTypes.string.isRequired
+}
+
+App.defaultProps = {
+    headerMessage: 'Hello props!'
 }
 
 root.render(
-    <App headerMessage={4} />
+    <App />
 );
