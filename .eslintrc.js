@@ -1,33 +1,33 @@
 module.exports = {
-    parser: "@babel/eslint-parser",
-    env: {
-      browser: true,
-      commonjs: true,
-      es6: true,
-      node: true,
-      jest: true,
+  parser: '@babel/eslint-parser',
+  env: {
+    browser: true,
+    commonjs: true,
+    es6: true,
+    node: true,
+    jest: true,
+  },
+  parserOptions: {
+    ecmaVersion: 'latest',
+    ecmaFeatures: {
+      impliedStrict: true,
+      jsx: true,
     },
-    parserOptions: {
-      ecmaVersion: 2020,
-      ecmaFeatures: {
-        impliedStrict: true,
-        jsx: true,
-      },
-      sourceType: "module",
+    sourceType: 'module',
+  },
+  plugins: ['react'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+  ],
+  settings: {
+    react: {
+      version: 'detect',
     },
-    plugins: ["react", "react-hooks"],
-    extends: [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:react-hooks/recommended",
-    ],
-    settings: {
-      react: {
-        version: "detect",
-      },
-    },
-    rules: {
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-    },
-  }
+  },
+  rules: {
+    'react/prop-types': 'error',
+    'react/react-in-jsx-scope': 'off',
+    'no-console': ['warn', { allow: ['clear', 'info', 'error', 'dir', 'trace'] }],
+  },
+};
