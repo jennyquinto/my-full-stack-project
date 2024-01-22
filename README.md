@@ -19,6 +19,9 @@
 
 
 # Concepts
-
 ## Virtual dom
 Before html is generated, it's possible to represent it as a JavaScript object tree which allows react to compare it against future versions of the same tree and generate parcial HTML nodes to take to the browser
+
+# Validations
+## Eslint
+the syntax problems are watched on the app displaying warnings, errors, and alerts on the console, keeping the rules defined at the eslint config file.  
