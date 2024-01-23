@@ -2,15 +2,20 @@ import React from "react"
 
 import Header from "./Header"
 
-const App = () => {
-    return (
-        <div className='App'>
-            <Header message='Naming Contests' />
-            <div className="content">
-                ...
+class App extends React.Component {
+    state = {
+        test: 37
+    }
+    render() {
+        return (
+            <div className='App'>
+                <Header message='Naming Contests' />
+                <div className="content">
+                    {this.state.test}
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 
 export default App
