@@ -22,8 +22,12 @@
 ## Virtual dom
 Before html is generated, it's possible to represent it as a JavaScript object tree which allows react to compare it against future versions of the same tree and generate parcial HTML nodes to take to the browser
 
+## Stateless component
+A stateless component means to a functional component react, they are calling stateless because it is not possible to use the react state with these components
+
 # Validations
 ## Eslint
 the syntax problems are watched on the app displaying warnings, errors, and alerts on the console, keeping the rules defined at the eslint config file.  
 ## Prop-Types
 - React component are going to be part of a prop validations in react to validate the type for these props
+
