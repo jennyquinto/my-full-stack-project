@@ -27,7 +27,9 @@ A stateless component means to a functional component react, they are calling st
 
 # Validations
 ## Eslint
-the syntax problems are watched on the app displaying warnings, errors, and alerts on the console, keeping the rules defined at the eslint config file.  
+the syntax problems are watched on the app displaying warnings, errors, and alerts on the console, keeping the rules defined at the eslint config file. 
+<img src="https://i.ibb.co/kKs5XM4/eslint-prop-types.png" alt="eslint-prop-types" border="0">
 ## Prop-Types
 - React component are going to be part of a prop validations in react to validate the type for these props
+
 
