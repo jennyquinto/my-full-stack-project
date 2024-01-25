@@ -2,6 +2,7 @@ import React from "react"
 
 import Header from "./Header"
 import ContestPreview from "./ContestPreview"
+import data from "../data"
 
 class App extends React.Component {
     state = {
@@ -9,7 +10,9 @@ class App extends React.Component {
         contests: []
     }
     componentDidMount() {
-        // timers, listeners, ajax requests
+        this.setState({
+            contests: data.contests
+        })
     }
     componentWillUnmount() {
         // clean timers liste
