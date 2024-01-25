@@ -7,5 +7,5 @@ import data from "./data.json"
 const root = createRoot(document.getElementById('root'))
 
 root.render(
-    <App contests={data.contests} />
+    <App />
 );
