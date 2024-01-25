@@ -1,8 +1,6 @@
 import React from "react"
 
 import Header from "./Header"
-import data from "../data.json"
-console.log(data)
 
 class App extends React.Component {
     state = {
