@@ -4,14 +4,14 @@ import Header from "./Header"
 
 class App extends React.Component {
     state = {
-        test: 37
+        pageHeader: "Naming Contests"
     }
     render() {
         return (
             <div className='App'>
-                <Header message='Naming Contests' />
+                <Header message={this.state.pageHeader} />
                 <div className="content">
-                    {this.state.test}
+                    ...
                 </div>
             </div>
         );
