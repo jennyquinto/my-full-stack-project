@@ -13,10 +13,3 @@ axios.get('/api/contests')
         );
     })
     .catch(console.error)
-
-
-
-
-// this.setState({
-//     contests: resp.data.contests
-// })
