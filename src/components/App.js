@@ -18,11 +18,20 @@ class App extends React.Component {
     componentWillUnmount() {
         // clean timers liste
     }
+    fetchContest = (contestId) => {
+        pushState(
+            { currentContestId: contestId },
+            `/contest/${contestId}`
+        )
+    }
     render() {
         return (
             <div className='App'>
                 <Header message={this.state.pageHeader} />
-                <ContestList contests={this.state.contests} />
+                <ContestList
+                    contests={this.state.contests}
+                    onContestClick={this.fetchContest}
+                />
             </div>
         );
     }
