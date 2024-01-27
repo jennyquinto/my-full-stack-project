@@ -20,9 +20,9 @@ import serverRender from "./serverRender"
 server.get('/', (req, res) => {
     serverRender()
         .then(({ initialMarkup, initialData }) => {
-            res.render('index.ejs', {
+            res.render('index', {
                 initialMarkup,
-                initialData,
+                initialData
             })
         })
         .catch(error => {
