@@ -1,5 +1,5 @@
 import React from 'react'
-import PropsType from 'prop-types'
+import PropTypes from 'prop-types'
 
 import ContestPreview from './ContestPreview'
 
@@ -11,7 +11,7 @@ const ContestList = ({ contests }) => (
     </div>
 )
 
-ContestList.prototype = {
-    contests: PropsType.array
+ContestList.propTypes = {
+    contests: PropTypes.array
 }
 export default ContestList
