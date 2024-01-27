@@ -15,12 +15,19 @@ server.use(sassMiddleware({
 
 server.set('view engine', 'ejs')
 
-import "./serverRender"
+import serverRender from "./serverRender"
 
 server.get('/', (req, res) => {
-    res.render('index.ejs', {
-        content: 'Hello <em>Jen!</em>, from Express and EJS'
-    })
+    serverRender()
+        .then(content => {
+            res.render('index.ejs', {
+                content
+            })
+        })
+        .catch(error => {
+            console.log(error)
+        })
+
 })
 server.use('/api', apiRouter)
 server.use(express.static('public'))
