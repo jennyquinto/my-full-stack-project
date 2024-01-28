@@ -2,6 +2,7 @@ import React from 'react'
 
 import Header from './Header'
 import ContestList from './ContestList';
+import Contest from './Contest';
 
 const pushState = (obj, url) =>
     window.history.pushState(obj, '', url)
