@@ -4,7 +4,7 @@ import data from "../src/data";
 const router = express.Router()
 
 const contests = data.contests.reduce((obj, contest, index) => {
-    obj[++index] = contest
+    obj[contest.id] = contest
     return obj
 }, {})
 

@@ -6,7 +6,6 @@ import ContestList from './ContestList';
 const pushState = (obj, url) =>
     window.history.pushState(obj, '', url)
 
-
 class App extends React.Component {
     state = {
         pageHeader: "Naming Contests",
@@ -23,15 +22,25 @@ class App extends React.Component {
             { currentContestId: contestId },
             `/contest/${contestId}`
         )
+        this.setState({
+            pageHeader: this.state.contests[contestId].contestName,
+            currentContestId: contestId
+        })
+
     }
+    currentContest() {
+        if (this.state.currentContestId) <Contest {...this.state.contests[this.state.currentContestId]} />
+        return <ContestList
+            contests={this.state.contests}
+            onContestClick={this.fetchContest}
+        />
+    }
+
     render() {
         return (
             <div className='App'>
                 <Header message={this.state.pageHeader} />
-                <ContestList
-                    contests={this.state.contests}
-                    onContestClick={this.fetchContest}
-                />
+                {this.currentContest()}
             </div>
         );
     }
