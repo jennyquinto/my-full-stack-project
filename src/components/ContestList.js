@@ -5,10 +5,10 @@ import ContestPreview from './ContestPreview'
 
 const ContestList = ({ contests, onContestClick }) => (
     <div className='ContestList'>
-        {contests.map(contest =>
+        {Object.keys(contests).map(contestId =>
             <ContestPreview
-                key={contest.id}
-                {...contest}
+                key={contestId}
+                {...contests[contestId]}
                 onClick={onContestClick}
             />
         )}
@@ -16,7 +16,7 @@ const ContestList = ({ contests, onContestClick }) => (
 )
 
 ContestList.propTypes = {
-    contests: PropTypes.array,
+    contests: PropTypes.object,
     onContestClick: PropTypes.func.isRequired
 }
 export default ContestList
