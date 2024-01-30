@@ -32,7 +32,6 @@ class App extends React.Component {
     currentContest() {
         if (this.state.currentContestId) {
             return <Contest {...this.state.contests[this.state.currentContestId]} />
-
         }
         return <ContestList
             contests={this.state.contests}
