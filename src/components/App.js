@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { Component } from 'react'
 
 import Header from './Header'
 import ContestList from './ContestList';
 import Contest from './Contest'
 import * as api from '../api'
+import PropTypes from 'prop-types'
 
 const pushState = (obj, url) =>
     window.history.pushState(obj, '', url)
 
-class App extends React.Component {
-    state = {
-        contests: this.props.initialContests
+class App extends Component {
+    static propTypes = {
+        initialData: PropTypes.object.isRequired
     }
+    state = this.props.initialData
+
     componentDidMount() {
 
     }

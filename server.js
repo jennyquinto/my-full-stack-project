@@ -4,6 +4,7 @@ import sassMiddleware from 'node-sass-middleware'
 
 import express from 'express'
 import path from 'path'
+import serverRender from './serverRender'
 
 
 const server = express()
@@ -15,9 +16,8 @@ server.use(sassMiddleware({
 
 server.set('view engine', 'ejs')
 
-import serverRender from "./serverRender"
 
-server.get('/', (req, res) => {
+server.get(['/', '/contest/:contestId'], (req, res) => {
     serverRender()
         .then(({ initialMarkup, initialData }) => {
             res.render('index', {
