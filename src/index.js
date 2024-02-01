@@ -6,5 +6,5 @@ import App from "./components/App"
 const root = createRoot(document.getElementById('root'))
 
 root.render(
-    <App initialContests={window.initialData.contests} />
+    <App initialData={window.initialData} />
 );
