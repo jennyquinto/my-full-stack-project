@@ -56,7 +56,7 @@ class App extends React.Component {
         return (
             <div className='App'>
                 <Header message={this.pageHeader()} />
-                {this.currentContest()}
+                {this.currentContent()}
             </div>
         );
     }
