@@ -5,14 +5,14 @@ class Contest extends Component {
     render() {
         return (
             <div className='Contest'>
-                {this.props.id}
+                {this.props.description}
             </div>
         )
     }
 }
 
 Contest.proptypes = {
-    id: PropTypes.string.isRequired
+    description: PropTypes.string.isRequired
 }
 
 export default Contest
